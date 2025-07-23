@@ -34,7 +34,7 @@ def multa_autoestrada(velocidade):
     return 0
 
 def menu():
-    print("\n--- Menu de Circulação ---")
+    print("\n--- Calculadora de multas ---\nIndique onde circulava o veículo:")
     print("1. Localidade")
     print("2. Fora da localidade")
     print("3. Autoestrada")
@@ -47,8 +47,12 @@ def main():
         if opcao == "0":
             print("Programa terminado.\n")
             break
-    
-        velocidade = float(input("Introduza a velocidade do carro (km/h): "))                
+        elif opcao == "1" or opcao == "2" or opcao == "3":
+            velocidade = float(input("Introduza a velocidade do carro (km/h): "))
+        else:
+            print("Opção inválida. Tente novamente.")
+            continue
+
         
         if opcao == "1":
             multa = multa_localidade(velocidade)
