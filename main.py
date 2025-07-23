@@ -32,3 +32,10 @@ def multa_autoestrada(velocidade):
     elif velocidade > 120:
         return 60
     return 0
+
+def menu():
+    print("\n--- Menu de Circulação ---")
+    print("1. Localidade")
+    print("2. Fora da localidade")
+    print("3. Autoestrada")
+    print("0. Sair")
